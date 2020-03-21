@@ -1,0 +1,8 @@
+parameters:
+  sets:
+    - 'clean-code'
+    - 'psr12'
+    - 'php70'
+    - 'php71'
+    - 'dead-code'
+    - 'types'
