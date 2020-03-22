@@ -4,9 +4,9 @@ Generate class code from array or JSON
 
 ## Installation via Docker
 
-`git clone ...`
+`git clone https://github.com/thirdknown/class-generator.git`
 
-`cd ...`
+`cd class-generator`
 
 `cp docker/conf/docker-compose.yml.dist docker-compose.yml`
 
@@ -48,7 +48,7 @@ Copy source JSON `order.json` file to `temp` directory.
 
 Run:
 
-`php ./console.php php ./console.php generate:classes-from-json temp My\\Namespace Order temp/order.json`
+`php ./console.php generate:classes-from-json temp My\\Namespace Order temp/order.json`
 
 Then you will find 3 new files in `temp` directory.
 **You can add getters and setters and change imports in PHP files by your IDE.**
