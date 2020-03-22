@@ -46,6 +46,8 @@ class GenerateClassesFromJsonCommand extends Command
         /** @var string $sourceJsonFileContent */
         $sourceJsonFileContent = file_get_contents($sourceJsonFile);
 
+        $output->writeln('Starting generating PHP classes from JSON to files');
+
         $classFromArrayGenerator = new ClassGenerator($generatoToDir);
 
         $classFromArrayGenerator->generatePhpFilesFromJson(
@@ -53,6 +55,8 @@ class GenerateClassesFromJsonCommand extends Command
             $namespaceName,
             $rootClassName,
         );
+
+        $output->writeln('OK');
 
         return 0;
     }
