@@ -16,7 +16,7 @@ Generate class code from array or JSON
 
 Copy source JSON `order.json` file to `temp` directory.
 
-###`order.json`
+`order.json`
 
 ```json
 {
@@ -51,9 +51,11 @@ Run:
 `php ./console.php php ./console.php generate:classes-from-json temp My\\Namespace Order temp/order.json`
 
 Then you will find 3 new files in `temp` directory.
-**You can add getters and setters to PHP files e.g. by Phpstorm**
+**You can add getters and setters and change imports in PHP files by your IDE.**
 
-###`Order.php`
+### Generated files
+
+`Order.php`
 
 ```php
 <?php
@@ -77,7 +79,7 @@ class Order
 }
 ```
 
-###`Item.php`
+`Item.php`
 
 ```php
 <?php
@@ -98,7 +100,7 @@ class Item
 }
 ```
 
-###`BillingAddress.php`
+`BillingAddress.php`
 
 ```php
 <?php
