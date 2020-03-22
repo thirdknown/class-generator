@@ -1,2 +1,4 @@
 /vendor/
-docker-compose.yml
+/docker-compose.yml
+/temp/*
+!/temp/.gitkeep
