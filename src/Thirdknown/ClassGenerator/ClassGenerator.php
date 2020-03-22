@@ -73,6 +73,11 @@ class ClassGenerator
     {
         $allPhpFiles = [];
 
+        $rootArrayIndexesType = $this->getIndexesType($array);
+        if ($rootArrayIndexesType === self::INDEXES_TYPE_ONLY_INT) {
+            $array = array_shift($array);
+        }
+
         $phpFile = new PhpFile();
         $phpFile->setStrictTypes();
 
