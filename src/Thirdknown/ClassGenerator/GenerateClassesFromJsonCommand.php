@@ -20,7 +20,7 @@ class GenerateClassesFromJsonCommand extends Command
     {
         $this->setDescription('Generates classes from array or JSON.');
 
-        $this->setHelp('php ./console.php generate:classes-from-json temp Thirdknown\\GoPay GoPay temp/payment.json');
+        $this->setHelp('php ./console.php php ./console.php generate:classes-from-json temp My\\Namespace Order temp/order.json');
 
         $this
             ->addArgument('generateToDir', InputArgument::REQUIRED, 'Where do you want to generate files to?')
