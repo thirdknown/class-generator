@@ -28,14 +28,27 @@ class GenerateClassesFromJsonCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $classFromArrayGenerator = new ClassGenerator(
-            $input->getArgument('generateToDir')
-        );
+        /** @var string $generatoToDir */
+        $generatoToDir = $input->getArgument('generateToDir');
+
+        /** @var string $sourceJsonFile */
+        $sourceJsonFile = $input->getArgument('sourceJsonFile');
+
+        /** @var string $namespaceName */
+        $namespaceName = $input->getArgument('namespaceName');
+
+        /** @var string $rootClassName */
+        $rootClassName = $input->getArgument('rootClassName');
+
+        /** @var string $sourceJsonFileContent */
+        $sourceJsonFileContent = file_get_contents($sourceJsonFile);
+
+        $classFromArrayGenerator = new ClassGenerator($generatoToDir);
 
         $classFromArrayGenerator->generatePhpFilesFromJson(
-            file_get_contents($input->getArgument('sourceJsonFile')),
-            $input->getArgument('namespaceName'),
-            $input->getArgument('rootClassName'),
+            $sourceJsonFileContent,
+            $namespaceName,
+            $rootClassName,
         );
 
         return 0;

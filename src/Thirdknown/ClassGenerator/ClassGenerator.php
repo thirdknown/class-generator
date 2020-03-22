@@ -181,7 +181,7 @@ class ClassGenerator
         foreach (array_keys($array) as $index) {
             if (is_int($index)) {
                 $intIndexesCount++;
-            } elseif (is_string($index)) {
+            } else {
                 $stringIndexesCount++;
             }
         }
