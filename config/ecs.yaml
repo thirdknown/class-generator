@@ -6,3 +6,6 @@ parameters:
     - 'php71'
     - 'dead-code'
     - 'types'
+
+  exclude_files:
+    - 'temp/*'
